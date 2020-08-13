@@ -12,7 +12,7 @@ def reservoir_sample(itr, n):
         kept.append(next(itr))
     
     # evaluate the stream until empty
-    while obj := next(itr, None):
+    while (obj := next(itr, None)) is not None:
         n += 1
         rval = randrange(n+1)
 
